@@ -1,8 +1,8 @@
 class reception:
-    def __init__(self, kantitepwodwi, nonpwodwi,typwodwi):
+    def __init__(self, kantitepwodwi, nonpwodwi,typpwodwi):
         self.kantitepwodwi = kantitepwodwi
         self.nonpwodwi = nonpwodwi
-        self.typwodwi = typwodwi
+        self.typpwodwi = typpwodwi
 
 
 
