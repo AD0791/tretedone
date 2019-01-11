@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
-import stok
-import reception
+from stok import stok
+from reception import reception
 
 app = Flask(__name__)
 
@@ -9,18 +9,12 @@ def database():
     non = request.json['non']
     kant = request.json['kant']
     typ = request.json['tip']
-    sent = stok(kant,non,typ)
+    reket = reception(kant,non,typ)
     lisP =[]
-    for i in range(kant):
-        newst = stok(nonpwodwi = non, typpwodwi = typ)
-        lisP.append(newst)
+    for i in range(reket.kantitepwodwi):
+        newst = stok(nonpwodwi = reket.nonpwodwi, typpwodwi = reket.typpwodwi)
+        lisP.append(newst.__dict__)
     return jsonify(lisP)
-
-
-
-
-
-
 
 #@app.route('/')
 #def recep():

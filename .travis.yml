@@ -1,0 +1,12 @@
+language: python
+python:
+    - "3.6"
+script:
+    - python testeapp.py
+deploy:
+  provider: heroku
+  api_key: $Heroku
+  app: tretedone
+  on:
+    branch: master
+
